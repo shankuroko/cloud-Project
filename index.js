@@ -9,10 +9,9 @@ app.get('/', (req, res) => {        //get requests to the root ("/") will route 
     //res.sendFile('index.html', {root: __dirname});      //server responds by sending the index.html file to the client's browser
    // console.log(req.params);
 
-   res.setHeader('Content-Type', 'application/json');
-   res.type('json'); 
-   
-   res.end(JSON.stringify({ a: req.params["a"] }));
+   res.setHeader('Content-Type', 'text/html');
+   res.type('text'); 
+   res.end(req.params.a );
     //res.write(`hello ${req.params['a']}`);                                                //the .sendFile method needs the absolute path to the file, see: https://expressjs.com/en/4x/api.html#res.sendFile 
 });
 
