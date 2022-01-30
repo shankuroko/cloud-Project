@@ -114,8 +114,8 @@ app.get('/drink', (req, res) => {
     }
     res.end(out);
 });
-app.post('/add', (req, res) => {
-    let items = JSON.parse(req.body.d);
+app.get('/add', (req, res) => {
+    let items = JSON.parse(req.query.d);
     let cart = items.data;
     let cost = 0;
     for (let i = 0; i < cart.length; i++) {
