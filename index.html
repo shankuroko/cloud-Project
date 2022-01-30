@@ -9,8 +9,22 @@
     <body>
         <div>Hello World!</div>
     </body>
-    <script>     
-       
+    <script>
+      
+        $.ajax({
+          url:'https://web-tech-cloud-project.herokuapp.com/',
+          type:'GET',
+          data:{
+            a:'shankar'
+          },
+          success:()=>{
+            console.log("sent");
+          },
+          complete:(res,s)=>{
+            console.log(s);
+            console.log(res.responseText);
+          }
+        });
       
     </script>
 </html>
