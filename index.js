@@ -73,7 +73,7 @@ app.get('/', (req, res) => {
         for (let i = 0; i < food.length; i++) {
             out += `<div class="menu-item" style="background-image:url('${food[i].img}')"><div class="menu-item_container">`;
             out += `<i>${food[i].name}</i>`;
-            out += `<i>${food[i].price}</i>`;
+            out += `<i>${food[i].price} Rs</i>`;
             out += `<div class="menu-item-btn" onclick='addToCart(` +
                 "`" + JSON.stringify(food[i]) + "`" + `)'>Add Item</div></div></div>`;
         }
@@ -81,7 +81,7 @@ app.get('/', (req, res) => {
         for (let i = 0; i < drinks.length; i++) {
             out += `<div class="menu-item" style="background-image:url('${drinks[i].img}')"><div class="menu-item_container">`;
             out += `<i>${drinks[i].name}</i>`;
-            out += `<i>${drinks[i].price}</i>`;
+            out += `<i>${drinks[i].price} Rs</i>`;
             out += `<div class="menu-item-btn" onclick='addToCart(` +
                 "`" + JSON.stringify(drinks[i]) + "`" + `)'>Add Item</div></div></div>`;
         }
