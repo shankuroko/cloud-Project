@@ -1,5 +1,7 @@
 const express = require('express'); //Import the express dependency
-const app = express();              //Instantiate an express app, the main work horse of this server
+const app = express();  
+var cors = require('cors');
+app.use(cors());           //Instantiate an express app, the main work horse of this server
 const port = process.env.PORT||5000;                  //Save the port number where your server will be listening
 
 //Idiomatic expression in express to route and respond to a client request
