@@ -116,14 +116,14 @@ app.get('/drink', (req, res) => {
 });
 app.get('/add', (req, res) => {
     let items = JSON.parse(req.query.d);
-    let cart = items.data;
+    /*let cart = items.data;
     let cost = 0;
     for (let i = 0; i < cart.length; i++) {
         cost += cart[i].qty * cart[i].price;
     }
     res.setHeader('Content-Type', 'text/html');
-    res.type('html');
-    res.end(cost);
+    res.type('html');*/
+    res.end(items);
 });
 app.listen(port, () => { //server starts listening for any attempts from a client to connect at port: {port}
     console.log(`
