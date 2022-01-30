@@ -11,7 +11,7 @@ app.get('/', (req, res) => {        //get requests to the root ("/") will route 
 
    res.setHeader('Content-Type', 'text/html');
    res.type('text'); 
-   res.end(req.params.a );
+   res.end(`console.log(${req.params})`);
     //res.write(`hello ${req.params['a']}`);                                                //the .sendFile method needs the absolute path to the file, see: https://expressjs.com/en/4x/api.html#res.sendFile 
 });
 
