@@ -20,7 +20,7 @@ app.post('/',(req, res) => {        //get requests to the root ("/") will route 
 
    res.setHeader('Content-Type', 'text/html');
    res.type('html'); 
-   res.end(`<script>console.log(${req.query.a})</script>`);
+   res.end(`<script>console.log(${req.body.a})</script>`);
 });
 app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
     console.log(`Now listening on port ${port}`); 
