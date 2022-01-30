@@ -79,14 +79,16 @@ app.get('/', (req, res) => {
             out += `<div class="menu-item"><div class="menu-item_container">`;
             out += `<i>${food[i].name}</i>`;
             out += `<i>${food[i].price}</i>`;
-            out += `<div class="menu-item-btn" onclick='addToCart("${JSON.stringify(food[i])}")'>Add Item</div></div></div>`;
+            out += `<div class="menu-item-btn" onclick='addToCart(` +
+                "`" + JSON.stringify(food[i]) + "`" + `)'>Add Item</div></div></div>`;
         }
     } else if (req.query.item == 'drinks') {
         for (let i = 0; i < drinks.length; i++) {
             out += `<div class="menu-item"><div class="menu-item_container">`;
             out += `<i>${drinks[i].name}</i>`;
             out += `<i>${drinks[i].price}</i>`;
-            out += `<div class="menu-item-btn" onclick='addToCart("${JSON.stringify(drinks[i])}")'>Add Item</div></div></div>`;
+            out += `<div class="menu-item-btn" onclick='addToCart(` +
+                "`" + JSON.stringify(drinks[i]) + "`" + `)'>Add Item</div></div></div>`;
         }
     }
     res.end(out);
