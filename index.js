@@ -71,7 +71,7 @@ app.get('/', (req, res) => {
     let out = '';
     if (req.query.item == 'food') {
         for (let i = 0; i < food.length; i++) {
-            out += `<div class="menu-item" style="background-image=url('${food[i].img}')"><div class="menu-item_container">`;
+            out += `<div class="menu-item" style="background-image:url('${food[i].img}')"><div class="menu-item_container">`;
             out += `<i>${food[i].name}</i>`;
             out += `<i>${food[i].price}</i>`;
             out += `<div class="menu-item-btn" onclick='addToCart(` +
@@ -79,7 +79,7 @@ app.get('/', (req, res) => {
         }
     } else if (req.query.item == 'drinks') {
         for (let i = 0; i < drinks.length; i++) {
-            out += `<div class="menu-item" style="background-image=url('${drinks[i].img}')"><div class="menu-item_container">`;
+            out += `<div class="menu-item" style="background-image:url('${drinks[i].img}')"><div class="menu-item_container">`;
             out += `<i>${drinks[i].name}</i>`;
             out += `<i>${drinks[i].price}</i>`;
             out += `<div class="menu-item-btn" onclick='addToCart(` +
