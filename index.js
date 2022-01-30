@@ -1,9 +1,11 @@
 const express = require('express'); //Import the express dependency
 const app = express();  
 var cors = require('cors');
-app.use(cors());           //Instantiate an express app, the main work horse of this server
+          //Instantiate an express app, the main work horse of this server
 const port = process.env.PORT||5000;                  //Save the port number where your server will be listening
-
+app.use(cors()); 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 //Idiomatic expression in express to route and respond to a client request
 app.get('/', (req, res) => {        //get requests to the root ("/") will route here
     //res.sendFile('index.html', {root: __dirname});      //server responds by sending the index.html file to the client's browser
