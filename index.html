@@ -10,21 +10,21 @@
         <div>Hello World!</div>
     </body>
     <script>
-      
-        $.ajax({
-          url:'https://web-tech-cloud-project.herokuapp.com/',
-          type:'GET',
-          data:{
-            a:'shankar'
-          },
-          success:()=>{
-            console.log("sent");
-          },
-          complete:(res,s)=>{
-            console.log(s);
-            console.log(res.responseText);
-          }
-        });
+      const todo = {
+          title: 'Some really important work to finish'
+      };
+      fetch('http://web-tech-cloud-project.herokuapp.com/', {
+        method: 'POST',
+        body: JSON.stringify(todo),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        }
+    })
+    .then(response => response.json())
+    .then(json => {
+        console.log(json);
+    });
+       
       
     </script>
 </html>
